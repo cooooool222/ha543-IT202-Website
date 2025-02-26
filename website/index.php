@@ -1,4 +1,11 @@
 <?php
+/* 
+Hamza Abdo
+Feburary 26, 2025
+ha543@njit.edu
+Phase 1 Assignment: Login and Logout
+IT202
+*/
 session_start();
 ?>
 <!DOCTYPE html>

@@ -1,3 +1,11 @@
+/* 
+Hamza Abdo
+Feburary 26, 2025
+ha543@njit.edu
+Phase 1 Assignment: Login and Logout
+IT202
+*/
+
 CREATE TABLE TechgadgetsManagers (
  TechgadgetsManagerID     INT(11)        NOT NULL   AUTO_INCREMENT,
  emailAddress           VARCHAR(255)   NOT NULL   UNIQUE,
