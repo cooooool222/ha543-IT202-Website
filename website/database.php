@@ -4,7 +4,7 @@ Hamza Abdo
 Feburary 26, 2025
 ha543@njit.edu
 Phase 1 Assignment: Login and Logout
-IT202
+IT202-004
 */
 function getDB() { 
     $host = 'sql1.njit.edu';

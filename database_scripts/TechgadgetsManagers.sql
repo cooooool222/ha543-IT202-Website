@@ -3,7 +3,7 @@ Hamza Abdo
 Feburary 26, 2025
 ha543@njit.edu
 Phase 1 Assignment: Login and Logout
-IT202
+IT202-004
 */
 
 CREATE TABLE TechgadgetsManagers (
