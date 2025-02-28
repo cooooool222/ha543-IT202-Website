@@ -20,7 +20,7 @@ $fetched = $stmt->fetch();
 $pronoun = "$pronouns";
 $name = "$firstName $lastName";  
 if ($fetched && isset($name)) {
-   $_SESSION['login'] = $name;
+   $_SESSION['login'] = true;
    $_SESSION['emailAddress'] = $emailAddress;
    $_SESSION['firstName'] = $firstName;
    $_SESSION['lastName'] = $lastName;
