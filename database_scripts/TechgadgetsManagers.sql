@@ -21,7 +21,7 @@ CREATE TABLE TechgadgetsManagers (
 INSERT INTO TechgadgetsManagers
 (emailAddress, password, pronouns, firstName, lastName, dateCreated)
 VALUES
-('johnj@gmail.com', SHA2('Interc3ption', 256), 'He/Him', 'John', 'Jackson', NOW());
+('johnj@techgadgets.com', SHA2('Interc3ption', 256), 'He/Him', 'John', 'Jackson', NOW());
 
 INSERT INTO TechgadgetsManagers
 (emailAddress, password, pronouns, firstName, lastName, dateCreated)
