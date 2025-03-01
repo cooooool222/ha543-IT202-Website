@@ -28,7 +28,7 @@ if ($fetched && isset($name)) {
    echo "<h2>Welcome to Techgadgets shop, $name ($pronoun)</h2>\n";
    header("Location: index.php");
 } else {
-   echo "<h2>Sorry, login incorrect for TechgadgetsShop</h2>\n";
+   echo "<h2>Sorry, login incorrect for Techgadgets Shop</h2>\n";
    echo "<a href=\"index.php\">Please try again</a>\n";
 }
 
