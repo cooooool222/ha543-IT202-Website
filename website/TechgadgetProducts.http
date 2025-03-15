@@ -1,0 +1,32 @@
+
+POST http://localhost:3000/addTechgadgetproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+TechgadgetProductID=15000
+&TechgadgetProductCode=LFS
+&TechgadgetProductName=Levi's Fitness Scale
+&TechgadgetDescription=The Levi Fitness Scale uses accurate springs to make a good scale. Lose weight faster than ever without having to worry about malfunctions.
+&TechgadgetCategoryID=500
+&TechgadgetListPrice=500
+&TechgadgetWholesalePrice=400
+&Techgadgetcolor=Blue
+###
+POST http://localhost:3000/changeTechgadgetproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+TechgadgetProductID=1000
+&TechgadgetProductName=sfwfwef
+&TechgadgetProductCode=BGZ
+&TechgadgetDescription=sometffhing something something
+&TechgadgetCategoryID=100
+&TechgadgetListPrice=599.99
+&TechgadgetWholesalePrice=699.99
+&Techgadgetcolor=Jail
+###
+GET http://localhost:3000/listTechgadgetproducts.test.php
+###
+
+POST http://localhost:3000/removeTechgadgetproduct.test.php
+Content-Type: application/x-www-form-urlencoded
+
+TechgadgetProductID=1000

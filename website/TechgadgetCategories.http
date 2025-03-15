@@ -1,0 +1,23 @@
+POST http://localhost:3000/addTechGadgetscategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+TechgadgetCategoryID=600
+&TechgadgetCategoryCode=HJK
+&TechgadgetshelfNumber=8
+&TechgadgetCategoryName=Head Jack Kat
+
+###
+GET http://localhost:3000/listTechgadgetscategories.php
+###
+POST http://localhost:3000/changeTechgadgetcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+TechgadgetCategoryID=600
+&TechgadgetCategoryCode=KLM
+&TechgadgetshelfNumber=10
+&TechgadgetCategoryName=Kamil Live Mantra
+###
+POST http://localhost:3000/removeTechgadgetcategory.test.php
+Content-Type: application/x-www-form-urlencoded
+
+TechgadgetCategoryID=600
