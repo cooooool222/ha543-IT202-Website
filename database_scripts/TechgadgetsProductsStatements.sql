@@ -20,32 +20,35 @@ PRIMARY KEY ( TechgadgetProductID )
 INSERT INTO TechGadgetsProducts 
 (TechgadgetProductID, TechgadgetProductCode, TechgadgetProductName, TechgadgetDescription, Techgadgetcolor, TechgadgetCategoryID, TechgadgetWholesalePrice, TechgadgetListPrice, DateCreated)
 VALUES
-(1000, 'OPG', 'Optical Ghost', 'The Optical Ghost is a cool virtual reality headset that uses illusions', 'Purple', 100, 599.00, 699.00, NOW())
+(3000, 'AVR', 'Amazon Virtual Reality', 'The  Amazon Virtual Reality is an dynamic virtual reality headset that uses 3d graphics. It contains special features that are exclusive.', 'Red', 100, 499.00, 599.00, NOW())
 
 INSERT INTO TechGadgetsProducts 
 (TechgadgetProductID, TechgadgetProductCode, TechgadgetProductName, TechgadgetDescription, Techgadgetcolor, TechgadgetCategoryID, TechgadgetWholesalePrice, TechgadgetListPrice, DateCreated)
 VALUES
-(2000, 'TMT', 'The Machine Thermo', 'The Machine Thermo is a highly intelligent smart thermostat', 'Red', 200, 499.00, 599.00, NOW())
+(6000, 'NST', 'Nest Thermostat', 'The Nest Thermostat is a highly intricate smart thermostat. It has an attractive desgin and is esaily portabler', 'Yellow', 200, 399.00, 499.00, NOW())
 
 INSERT INTO TechGadgetsProducts 
 (TechgadgetProductID, TechgadgetProductCode, TechgadgetProductName, TechgadgetDescription, Techgadgetcolor, TechgadgetCategoryID, TechgadgetWholesalePrice, TechgadgetListPrice, DateCreated)
 VALUES
-(3000, 'TJP', 'The Joshner Pad', 'The Joshner Pad is a highly intelligent wireless charging pad', 'Blue', 300, 399.00, 499.00, NOW())
+(9000, 'IOWC', 'iOttie Wireless Car Charger', 'The iOttie Wireless is an sizable wireless charging pad. It is a versatile car mount.', 'White', 300, 199.00, 399.00, NOW())
 
 INSERT INTO TechGadgetsProducts
 (TechgadgetProductID, TechgadgetProductCode, TechgadgetProductName, TechgadgetDescription, Techgadgetcolor, TechgadgetCategoryID, TechgadgetWholesalePrice, TechgadgetListPrice, DateCreated)
 VALUES
-(4000, 'SBL', 'Speaker bleaker', 'The Speaker Bleacker contains bluetooth which can be used in a 100m Radius! ', 'Yellow', 400, 299.00, 399.00, NOW())
+(12000, 'BSL', 'Bose SoundLink', 'The Bose SoundLink is a speaker that contains bluetooth. Jt stylish cylinder with a sturdy aluminium body.', 'Purple', 400, 299.00, 399.00, NOW())
 
 INSERT INTO TechGadgetsProducts
 (TechgadgetProductID, TechgadgetProductCode, TechgadgetProductName, TechgadgetDescription, Techgadgetcolor, TechgadgetCategoryID, TechgadgetWholesalePrice, TechgadgetListPrice, DateCreated)
 VALUES
-(5000, 'HSC', 'Healthy Scale', 'The Healthy scale is a fitness scale that will accurately measure your weight!', 'White', 500, 199.00, 299.00, NOW())
+(15000, 'WBS', 'Withings Body Scan', 'The Withingd Body Scan is a fitness scale that will accurately measure your weight!. It is packed with health-tracking features and is the brands top scale.', 'Blue', 500, 199.00, 299.00, NOW())
 
 SELECT * FROM `TechGadgetsProducts`
 
-DROP TABLE `TechGadgetsProducts`
-
-DELETE FROM `TechGadgetsProducts` where `TechgadgetProductID`=3000
+DELETE FROM `TechGadgetsProducts` where `TechgadgetProductID`=11000
 
 SHOW CREATE TABLE TechGadgetsProducts;
+
+SHOW BINARY LOGS;
+SHOW VARIABLES LIKE 'datadir';
+
+mysql -u root -p ha543 < backup.sql;

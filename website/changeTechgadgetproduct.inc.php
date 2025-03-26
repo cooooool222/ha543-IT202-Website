@@ -6,7 +6,11 @@ ha543@njit.edu
 Phase 1 Assignment: Login and Logout
 IT202-004
 */
-include("TechGadgetsproduct.php");
+//include("TechGadgetsproduct.php");
+if (isset($_SESSION['login'])) {
+   $TechgadgetProductID = $_POST['TechgadgetProductID'];
+   $answer = $_POST['answer'];
+   if ($answer == "Update Product") {
 $TechgadgetProductID = $_POST['TechgadgetProductID'];
 $product = Product::findProduct($TechgadgetProductID);
 $product->TechgadgetProductID = $_POST['TechgadgetProductID'];
@@ -23,4 +27,12 @@ if ($result) {
 } else {
    echo "<h2>Problem updating product $TechgadgetProductID</h2>\n";
 }
+} else {
+    echo "<h2>Update Canceled for item $TechgadgetProductID</h2>\n";
+   }
+} else {
+   echo "<h2>Please login first</h2>\n";
+}
 ?>
+
+

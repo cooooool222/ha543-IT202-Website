@@ -23,7 +23,7 @@ class Category
    function __toString()
    {
        $output = "<h2>Category Number: $this->TechgadgetCategoryID</h2>\n" .
-           "<h2>$this->TechgadgetCategoryCode, $this->TechgadgetshelfNumber, $this->TechgadgetCategoryName,</h2>\n";
+           "<h2>$this->TechgadgetCategoryCode, $this->TechgadgetshelfNumber, $this->TechgadgetCategoryName</h2>\n";
        return $output;
    }
 

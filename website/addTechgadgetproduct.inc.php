@@ -6,7 +6,8 @@ ha543@njit.edu
 Phase 1 Assignment: Login and Logout
 IT202-004
 */
-include('TechGadgetsproduct.php');
+//include('TechGadgetsproduct.php');
+if(isset($_SESSION['login'])) {
 $TechgadgetProductID = $_POST['TechgadgetProductID'];
 if ((trim($TechgadgetProductID) == '') or (!is_numeric($TechgadgetProductID))) {
    echo "<h2>Sorry, you must enter a valid product ID number</h2>\n";
@@ -33,5 +34,8 @@ if ((trim($TechgadgetProductID) == '') or (!is_numeric($TechgadgetProductID))) {
        echo "<h2>New product #$TechgadgetProductID successfully added</h2>\n";
    else
        echo "<h2>Sorry, there was a problem adding that product</h2>\n";
+}
+} else {
+    echo "<h2>Please login first</h2>\n";
 }
 ?>

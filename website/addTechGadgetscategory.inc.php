@@ -6,7 +6,8 @@ ha543@njit.edu
 Phase 1 Assignment: Login and Logout
 IT202-004
 */
-include("TechGadgetscategory.php");
+//include("TechGadgetscategory.php");
+if(isset($_SESSION['login'])) {
 $TechgadgetCategoryID = $_POST['TechgadgetCategoryID'];
 if ((trim($TechgadgetCategoryID) == '') or (!is_numeric($TechgadgetCategoryID))) {
   echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
@@ -22,5 +23,8 @@ if ((trim($TechgadgetCategoryID) == '') or (!is_numeric($TechgadgetCategoryID)))
   } else {
       echo "<h2>Sorry, there was a problem adding that category</h2>\n";
   }
+}
+} else {
+  echo "<h2> Please log in first</h2>\n";
 }
 ?>
