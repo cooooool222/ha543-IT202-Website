@@ -42,7 +42,7 @@ VALUES
 
 SELECT * FROM TechGadgetsCategories
 
-DROP TABLE TechGadgetsCategories;
+
 
 DESCRIBE TechGadgetsCategories;
 

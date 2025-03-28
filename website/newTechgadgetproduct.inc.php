@@ -19,7 +19,7 @@
        </tr>
        <tr> 
         <td>Techgadget Description:</td> 
-        <td><input type="text" name="TechgadgetDescription" size="10"></td>
+        <td><input type="text" name="TechgadgetDescription" size="20"></td>
        </tr>
        <tr>
            <td>Techgadget ListPrice:</td>

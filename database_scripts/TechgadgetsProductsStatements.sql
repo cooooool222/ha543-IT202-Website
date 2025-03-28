@@ -44,7 +44,7 @@ VALUES
 
 SELECT * FROM `TechGadgetsProducts`
 
-DELETE FROM `TechGadgetsProducts` where `TechgadgetProductID`=11000
+DELETE FROM `TechGadgetsProducts` where `TechgadgetProductID`=9998
 
 SHOW CREATE TABLE TechGadgetsProducts;
 

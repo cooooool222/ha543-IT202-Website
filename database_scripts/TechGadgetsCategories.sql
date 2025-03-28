@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Mar 15, 2025 at 02:36 AM
+-- Generation Time: Mar 28, 2025 at 05:48 PM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -43,7 +43,8 @@ INSERT INTO `TechGadgetsCategories` (`TechgadgetCategoryID`, `TechgadgetCategory
 (200, 'STH', 2, 'Smart Thermostat', '2025-03-14 11:29:34'),
 (300, 'WCP', 3, 'Wireless Charging Pad ', '2025-03-14 11:30:04'),
 (400, 'BSP', 4, 'Bluetooth Speaker', '2025-03-14 11:30:58'),
-(500, 'FSS', 5, 'Fitness Smart Scale', '2025-03-14 11:31:51');
+(500, 'FSS', 5, 'Fitness Smart Scale', '2025-03-14 11:31:51'),
+(900, 'TST', 10, 'TEST', '2025-03-28 13:14:38');
 
 --
 -- Indexes for dumped tables

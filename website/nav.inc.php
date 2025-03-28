@@ -34,7 +34,7 @@
        </tr>
        <tr>
            <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=newTechgadgetproduct">
-                   <strong>Add New Prodcut</strong></a></td>
+                   <strong>Add New Product</strong></a></td>
        </tr>
        <tr>
            <td>
