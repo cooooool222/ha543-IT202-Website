@@ -4,7 +4,7 @@
    ?>
        <tr>
            <td>
-               <hr />
+               <!-- <hr /> -->
            </td>
        </tr>
    <?php
@@ -12,10 +12,11 @@
        echo "<td><h3>Welcome, {$_SESSION['firstName']} {$_SESSION['lastName']} </h3></td>\n";
    ?>
        <tr>
-           <td><a href="index.php"><strong>Home</strong></a></td>
+           <td><img src="images/homeicontech.png" alt= "TechgadgetHome Icon" width="12" height = "12">&nbsp;
+            <a href="index.php"><strong>Home</strong></a></td>
        </tr>
-       <tr>
-           <td><strong>Categories</strong></td>
+       <tr><td><img src="images/category.jpg" alt= "TechgadgetCategory Icon" width="12" height = "12">&nbsp;
+           <strong>Categories</strong></td>
        </tr>
        <tr>
            <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listTechgadgetscategories">
@@ -26,7 +27,8 @@
                    <strong>Add New Category</strong></a></td>
        </tr>
        <tr>
-           <td><strong>Items</strong></td>
+           <td><img src = "images/items.jpg" alt = "TechgadgetItems Icon" width = "12" height ="12">&nbsp;
+            <strong>Items</strong></td>
        </tr>
        <tr>
            <td>&nbsp;&nbsp;&nbsp;<a href="index.php?content=listTechgadgetproducts">
@@ -43,7 +45,10 @@
        </tr>
        <tr>
            <td><a href="index.php?content=logout">
-                   <strong>Logout</strong></a></td>
+           <img src="images/logout.webp" alt="Logout Icon" width="12" height="12"></a>&nbsp
+                  <a href="index.php?content=logout">
+                   <strong>Logout</strong></a>
+                </td>
        </tr>
        <tr>
            <td>&nbsp;</td>
@@ -52,7 +57,7 @@
            <td>
                <form action="index.php" method="post">
                    <label>Search for Product:</label><br>
-                   <input type="text" name="TechgadgetProductID" size="14" />
+                   <input type="number" name="TechgadgetProductID" min="0"  size="14" />
                    <input type="submit" value="find" />
                    <input type="hidden" name="content" value="updateTechgadgetproduct" />
                    </form>
@@ -62,7 +67,7 @@
            <td>
                <form action="index.php" method="post">
                    <label>Search for Category:</label><br>
-                   <input type="text" name="TechgadgetCategoryID" size="14" />
+                   <input type="number" name="TechgadgetCategoryID" min ="0" size="14"/>
                    <input type="submit" value="find" />
                    <input type="hidden" name="content" value="displayTechgadgetcategory"/>
                </form>

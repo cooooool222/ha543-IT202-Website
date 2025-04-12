@@ -46,4 +46,4 @@ SELECT * FROM TechGadgetsCategories
 
 DESCRIBE TechGadgetsCategories;
 
-DELETE FROM TechGadgetsCategories WHERE TechgadgetCategoryID = 900
+DELETE FROM TechGadgetsCategories WHERE TechgadgetCategoryID = 668

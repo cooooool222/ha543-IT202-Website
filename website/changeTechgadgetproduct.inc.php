@@ -14,21 +14,21 @@ if (isset($_SESSION['login'])) {
 $TechgadgetProductID = $_POST['TechgadgetProductID'];
 $product = Product::findProduct($TechgadgetProductID);
 $product->TechgadgetProductID = $_POST['TechgadgetProductID'];
-$product->TechgadgetProductName = $_POST['TechgadgetProductName'];
-$product->TechgadgetProductCode = $_POST['TechgadgetProductCode'];
-$product->TechgadgetDescription = $_POST['TechgadgetDescription'];
+$product->TechgadgetProductName = htmlspecialchars($_POST['TechgadgetProductName']);
+$product->TechgadgetProductCode = htmlspecialchars($_POST['TechgadgetProductCode']);
+$product->TechgadgetDescription = htmlspecialchars($_POST['TechgadgetDescription']);
 $product->TechgadgetCategoryID = $_POST['TechgadgetCategoryID'];
 $product->TechgadgetListPrice = $_POST['TechgadgetListPrice'];
 $product->TechgadgetWholesalePrice = $_POST['TechgadgetWholesalePrice'];
-$product->Techgadgetcolor = $_POST['Techgadgetcolor'];
+$product->Techgadgetcolor = htmlspecialchars($_POST['Techgadgetcolor']);
 $result = $product->updateProduct();
 if ($result) {
-   echo "<h2>product $TechgadgetProductID updated</h2>\n";
+   echo "<h2>product" . htmlspecialchars($TechgadgetProductID) . "updated</h2>\n";
 } else {
-   echo "<h2>Problem updating product $TechgadgetProductID</h2>\n";
+   echo "<h2>Problem updating product" . htmlspecialchars($TechgadgetProductID) . "</h2>\n";
 }
 } else {
-    echo "<h2>Update Canceled for item $TechgadgetProductID</h2>\n";
+    echo "<h2>Update Canceled for item:" . htmlspecialchars($TechgadgetProductID) . "</h2>\n";
    }
 } else {
    echo "<h2>Please login first</h2>\n";

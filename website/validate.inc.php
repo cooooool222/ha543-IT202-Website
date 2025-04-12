@@ -7,8 +7,9 @@ Phase 1 Assignment: Login and Logout
 IT202-004
 */
 require_once('database.php');
-$emailAddress = $_POST['emailAddress'];
+$emailAddress = htmlspecialchars($_POST['emailAddress']);
 $password = $_POST['password'];
+if (filter_var($emailAddress, FILTER_VALIDATE_EMAIL)) {
 $query = "SELECT firstName, lastName, pronouns FROM TechgadgetsManagers " .
         "WHERE emailAddress = ? AND password = SHA2(?,256)";
 $db = getDB();
@@ -31,5 +32,10 @@ if ($fetched && isset($name)) {
    echo "<h2>Sorry, login incorrect for Techgadgets Shop</h2>\n";
    echo "<a href=\"index.php\">Please try again</a>\n";
 }
+} else {
+   echo "<h2>Please enter a valid email address</h2>\n";
+   echo "<a href=\"index.php\">Please try again</a>\n";
+}
+
 
 ?>

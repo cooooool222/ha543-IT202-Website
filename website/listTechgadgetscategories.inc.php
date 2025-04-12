@@ -19,3 +19,5 @@ foreach($TechGadgetsCategories as $category) {
    echo "<option value=\"$TechgadgetCategoryID\">$name</option>\n";
 }
 ?>
+</select>
+</form>

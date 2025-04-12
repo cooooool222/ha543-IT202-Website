@@ -44,7 +44,8 @@ VALUES
 
 SELECT * FROM `TechGadgetsProducts`
 
-DELETE FROM `TechGadgetsProducts` where `TechgadgetProductID`=9998
+SELECT * FROM TechGadgetsProducts JOIN TechGadgetsCategories ON TechGadgetsProducts.TechgadgetCategoryID = TechGadgetsCategories.TechgadgetCategoryID;
+DELETE FROM `TechGadgetsProducts` where `TechgadgetProductID`=99999
 
 SHOW CREATE TABLE TechGadgetsProducts;
 

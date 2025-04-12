@@ -8,17 +8,19 @@ IT202-004
 */
 //include('TechGadgetsproduct.php');
 if(isset($_SESSION['login'])) {
-$TechgadgetProductID = $_POST['TechgadgetProductID'];
-if ((trim($TechgadgetProductID) == '') or (!is_numeric($TechgadgetProductID))) {
+$TechgadgetProductID = filter_input(INPUT_POST, 'TechgadgetProductID', FILTER_VALIDATE_INT);
+if ((trim($TechgadgetProductID) == '') or (!is_int($TechgadgetProductID))) {
    echo "<h2>Sorry, you must enter a valid product ID number</h2>\n";
+} elseif (Product::findProduct($TechgadgetProductID)) {
+    echo "<h2>Sorry, A product with the ID #$TechgadgetProductID already exists</h2>\n";
 } else {
-    $TechgadgetProductName = $_POST['TechgadgetProductName'];
-    $TechgadgetProductCode = $_POST['TechgadgetProductCode'];
-    $TechgadgetDescription = $_POST['TechgadgetDescription'];
-    $TechgadgetCategoryID = $_POST['TechgadgetCategoryID'];
-    $TechgadgetListPrice = $_POST['TechgadgetListPrice'];
-    $TechgadgetWholesalePrice = $_POST['TechgadgetWholesalePrice'];
-    $Techgadgetcolor = $_POST['Techgadgetcolor'];
+    $TechgadgetProductName = htmlspecialchars($_POST['TechgadgetProductName']);
+    $TechgadgetProductCode = htmlspecialchars($_POST['TechgadgetProductCode']);
+    $TechgadgetDescription = htmlspecialchars($_POST['TechgadgetDescription']);
+    $TechgadgetCategoryID = filter_input(INPUT_POST, 'TechgadgetCategoryID', FILTER_VALIDATE_INT);
+    $TechgadgetListPrice = filter_input(INPUT_POST, 'TechgadgetListPrice', FILTER_VALIDATE_FLOAT);
+    $TechgadgetWholesalePrice = filter_input(INPUT_POST, 'TechgadgetWholesalePrice', FILTER_VALIDATE_FLOAT);
+    $Techgadgetcolor = htmlspecialchars($_POST['Techgadgetcolor']);
    $product = new Product(
        $TechgadgetProductID,
        $TechgadgetProductName,

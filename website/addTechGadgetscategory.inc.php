@@ -8,13 +8,16 @@ IT202-004
 */
 //include("TechGadgetscategory.php");
 if(isset($_SESSION['login'])) {
-$TechgadgetCategoryID = $_POST['TechgadgetCategoryID'];
-if ((trim($TechgadgetCategoryID) == '') or (!is_numeric($TechgadgetCategoryID))) {
+$TechgadgetCategoryID = filter_input(INPUT_POST,'TechgadgetCategoryID', FILTER_VALIDATE_INT);
+if ((trim($TechgadgetCategoryID) == '') or (!is_int($TechgadgetCategoryID))) {
   echo "<h2>Sorry, you must enter a valid category ID number</h2>\n";
-} else {
-  $TechgadgetCategoryCode = $_POST['TechgadgetCategoryCode'];
-  $TechgadgetshelfNumber = $_POST['TechgadgetshelfNumber'];
-  $TechgadgetCategoryName = $_POST['TechgadgetCategoryName'];
+} elseif  (Category::findCategory($TechgadgetCategoryID)) {
+       echo "<h2>Sorry, A category with the ID #$TechgadgetCategoryID already exists</h2>\n";
+}
+else {
+  $TechgadgetCategoryCode = htmlspecialchars($_POST['TechgadgetCategoryCode']);
+  $TechgadgetshelfNumber = filter_input(INPUT_POST, 'TechgadgetshelfNumber', FILTER_VALIDATE_INT);
+  $TechgadgetCategoryName = htmlspecialchars($_POST['TechgadgetCategoryName']);
   $category = new Category($TechgadgetCategoryID, $TechgadgetCategoryCode, $TechgadgetshelfNumber, $TechgadgetCategoryName);
   $result = $category->saveCategory();
   if ($result) {
@@ -24,7 +27,8 @@ if ((trim($TechgadgetCategoryID) == '') or (!is_numeric($TechgadgetCategoryID)))
       echo "<h2>Sorry, there was a problem adding that category</h2>\n";
   }
 }
-} else {
+}
+ else {
   echo "<h2> Please log in first</h2>\n";
 }
 ?>

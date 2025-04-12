@@ -18,31 +18,31 @@ if (!isset($_POST['TechgadgetProductID']) or (!is_numeric($_POST['TechgadgetProd
                </tr>
                <tr>
                <td>TechgadgetProduct Name</td>
-                   <td><input type="text" name="TechgadgetProductName" value="<?php echo $product->TechgadgetProductName; ?>"></td>
+                   <td><input type="text" name="TechgadgetProductName" minlength="1" maxlength="255" required value="<?php echo $product->TechgadgetProductName; ?>"></td>
                </tr>
                <tr>
                    <td>TechgadgetCategory ID</td>
-               <td><input type="text" name="TechgadgetCategoryID" value="<?php echo $product->TechgadgetCategoryID; ?>"></td>
+               <td><input type="number" name="TechgadgetCategoryID" min="100" max="99999999999" required  value="<?php echo $product->TechgadgetCategoryID; ?>"></td>
                </tr>
                <tr> 
                  <td>Techgadget ProductCode </td>
-                 <td><input type="text" name="TechgadgetProductCode" value="<?php echo $product->TechgadgetProductCode; ?>"></td>
+                 <td><input type="text" name="TechgadgetProductCode" minlength = "1" maxlength = "10" required value="<?php echo $product->TechgadgetProductCode; ?>"></td>
                </tr>
                <tr>
                 <td>Techgadget Description </td> 
-                <td><input type="text" name="TechgadgetDescription" value="<?php echo $product->TechgadgetDescription; ?>"></td>
+                <td><input type="text" name="TechgadgetDescription" required value="<?php echo $product->TechgadgetDescription; ?>"></td>
                </tr>
                <tr>
                 <td>Techgadget color</td>
-                <td><input type="text" name="Techgadgetcolor" value="<?php echo $product->Techgadgetcolor; ?>"></td>
+                <td><input type="text" name="Techgadgetcolor" minlength = "1" maxlength = "255" required value="<?php echo $product->Techgadgetcolor; ?>"></td>
                </tr>
                <tr>
                 <td>Techgadget WholesalePrice </td> 
-               <td><input type="text" name="TechgadgetWholesalePrice" value="<?php echo $product->TechgadgetWholesalePrice; ?>"></td>
+               <td><input type="number" name="TechgadgetWholesalePrice"  min = "0" max = "9999999999" step = "0.01" required value="<?php echo $product->TechgadgetWholesalePrice; ?>"></td>
                 </tr>
                 <tr>
                    <td>Techgadget ListPrice</td>
-                 <td><input type="text" name="TechgadgetListPrice" value="<?php echo $product->TechgadgetListPrice; ?>"></td>
+                 <td><input type="number" name="TechgadgetListPrice"  min = "0" max = "9999999999" step = "0.01" required value="<?php echo $product->TechgadgetListPrice; ?>"></td>
                </tr>
            </table><br><br>
            <input type="submit" name="answer" value="Update Product">

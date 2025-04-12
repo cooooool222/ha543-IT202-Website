@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #5585b5;
+    color: #f5eec8;
+    font-size: 90%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+}
+h1 {
+    font-family:Verdana, Tahoma, sans-serif;
+    font-size: 120%;
+    color: #f5eec8;
+    margin: 0px;
+    padding: 0px;
+}
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 110%;
+    color: #f5eec8;
+    margin: 0px;
+    padding: 0px;
+}
+h3 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 100%;
+    color: #f5eec8;
+    margin: 0px;
+    padding: 0px;
+}
+h4 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 90%;
+    color: #f5eec8;
+    margin: 0px;
+    padding: 0px;
+}
+h5 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: #f5eec8;
+    margin: 0px;
+    padding: 0px;
+}
+h6 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 80%;
+    color: #f5eec8;
+    margin: 0px;
+    padding: 0px;
+}
+
+footer {
+    font-family: Geneva, Tahoma, sans-serif;
+    font-size: 80%;
+    background-color: #f5eec8;
+    color: blue;
+    padding: 5px;
+    border-bottom: 3px solid #5585b5;
+    border-top: 3px solid #5585b5;
+    clear: both;
+    text-align: center;
+    width:100%;
+ }
+ main {
+    padding: 5px;
+    border-top: 3px solid #5585b5;
+    float: left;
+    width: 55%;
+    height: 100%;
+ }
+ 
+ main table {
+    padding: 2px;
+ }
+ 
+ main td {
+    padding: 2px;
+ }
+ header {
+    padding: 5px;
+    border-bottom: 3px solid #5585b5;
+    height: 40px;
+    width: 100%;
+ }
+ 
+ nav {
+    padding: 5px;
+    border-bottom: 1px solid #5585b5;
+    border-right: 1px solid #5585b5;
+    border-top: 1px solid #5585b5;
+    border-left: 5px solid #5585b5;
+    color: blue;
+    background-color: #53a8b6;
+    width: 20%;
+ }
+  
+ a, a:link {
+    color: #16725b;
+   }
+   a:active {
+    color: #267c84;
+   }
+   
+   nav a, nav a:link {
+    color: #186b72;
+    text-decoration: none;
+   }
+   nav a:visited {
+    color: #1b4162;
+   }
+   nav a:hover {
+    color: #d56b6f;
+   }
+   nav a:active {
+    color: #889192;
+   }
+   
+   input {
+    border: 2px solid #267c84;
+    background-color: white;
+    color: #41334a;
+    border-radius: 5px;
+   }
+
+   input[type=submit] {
+    font-family: Verdana, Arial, sans-serif;
+    font-size: 80%;
+   }
+   input:required:invalid {
+    border-color: #53a8b6;
+    background-color: #186b72;
+   }
+   input:required:valid {
+    border-color: #1b4162;
+    background-color: #5585b5;
+   }
+   
+   input:focus {
+    outline: none;
+    border-color: #16725b;
+    background-color: #6d9ccb;
+    box-shadow: 0 0 5px #16725b;
+   }
+   

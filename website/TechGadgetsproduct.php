@@ -122,6 +122,7 @@ static function findProduct($TechgadgetProductID)
    function updateProduct()
    {
        $db = getDB();
+       
        $query = "UPDATE TechGadgetsProducts SET TechgadgetProductName= ?, " .
            "TechgadgetProductCode = ?, TechgadgetDescription = ?, TechgadgetCategoryID = ?,  TechgadgetListPrice = ?,TechgadgetWholesalePrice = ?, Techgadgetcolor = ? WHERE TechgadgetProductID = $this->TechgadgetProductID";
        $stmt = $db->prepare($query);
