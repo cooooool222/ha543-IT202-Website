@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: sql1.njit.edu
--- Generation Time: Mar 28, 2025 at 05:49 PM
+-- Generation Time: Apr 12, 2025 at 03:30 AM
 -- Server version: 8.0.17
 -- PHP Version: 7.4.8
 
@@ -43,10 +43,14 @@ CREATE TABLE IF NOT EXISTS `TechGadgetsProducts` (
 --
 
 INSERT INTO `TechGadgetsProducts` (`TechgadgetProductID`, `TechgadgetProductCode`, `TechgadgetProductName`, `TechgadgetDescription`, `Techgadgetcolor`, `TechgadgetCategoryID`, `TechgadgetWholesalePrice`, `TechgadgetListPrice`, `DateCreated`) VALUES
+(901, 'TA-TEST', 'TA_TEST', 'TA_TESTING', 'Red', 901, 999.00, 999.00, '2025-04-03 18:21:28'),
 (1000, 'OPG', 'Optical Ghost', 'The Optical Ghost is a cool virtual reality headset that uses illusions. It contains interesting features that determine the worth of it.', 'Purple', 100, 399.00, 598.00, '2025-03-25 11:42:34'),
+(1001, 'grgr', 'rrgrgrg', 'fffff', 'Blue', 102, 499.99, 500.00, '2025-04-11 14:12:35'),
+(1002, 'hi', 'Test', 'fefiefi', 'Blue ', 100, 599.99, 599.99, '2025-04-11 23:12:52'),
 (2000, 'FVR', 'Facebook Virtual Reality', 'The  Facebook Virtual Reality is an amazing virtual reality headset that uses 3d graphics. It contains crucuial features that redefine virtual reality.', 'Pink', 100, 499.00, 599.00, '2025-03-25 11:44:02'),
 (3000, 'AVR', 'Amazon Virtual Reality', 'The  Amazon Virtual Reality is an dynamic virtual reality headset that uses 3d graphics. It contains special features that are exclusive.', 'Red', 100, 499.00, 599.00, '2025-03-25 11:46:21'),
 (4000, 'TMT', 'The Machine Thermo', 'The Machine Thermo is a highly intelligent smart thermostat. It has a soft shell for sliding', 'Green', 200, 399.00, 499.00, '2025-03-25 11:47:56'),
+(4444, 'ggg', 'grgrg', 'feefee', '&lt;script&gt;alert(&quot;Hello!&quot;);&lt;/script&gt;', 101, 199.99, 299.99, '2025-04-11 13:05:28'),
 (5000, 'EST', 'Ecobee Smart Thermostat', 'The Ecobee  is a highly intelligent smart thermostat. It contains introspective stuff too make your experience better', 'Black', 200, 399.00, 499.00, '2025-03-25 11:50:46'),
 (6000, 'NST', 'Nest Thermostat', 'The Nest Thermostat is a highly intricate smart thermostat. It has an attractive desgin and is esaily portabler', 'Yellow', 200, 399.00, 499.00, '2025-03-25 11:52:17'),
 (7000, 'TJP', 'The Joshner Pad', 'The Joshner Pad is a highly intelligent wireless charging pad. It can charge in a jiffy', 'Black', 300, 199.00, 299.00, '2025-03-25 11:54:04'),
