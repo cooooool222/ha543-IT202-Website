@@ -6,6 +6,7 @@ ha543@njit.edu
 Phase 1 Assignment: Login and Logout
 IT202-004
 */
+ob_start();
 session_start();
 include("config.php");
 include("TechGadgetscategory.php");
@@ -17,6 +18,7 @@ include("TechGadgetsproduct.php");
     <title>Techgadgets Shop</title>
     <link rel="stylesheet" type="text/css" href="Techgadget_styles.css">
     <link rel="icon" type="image/png" href="images/Techgadgeticon.png">
+    <script src="realtime.js"></script>
 </head>
 <body>
     <header> 
@@ -35,9 +37,19 @@ include("TechGadgetsproduct.php");
            }
            ?>
        </main>
+       <aside>
+           <?php include("aside.inc.php"); ?>
+           <script>
+               getRealTime();
+               setInterval(getRealTime, 5000);
+           </script>
+       </aside>
    </section>
    <footer>
        <?php include("footer.inc.php"); ?>
    </footer>
 </body>
 </html>
+<?php 
+ob_end_flush();
+?>

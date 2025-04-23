@@ -1,63 +1,59 @@
+<style>
+   form[name="TechgadgetProduct"] {
+       display: grid;
+       grid-template-columns: 125px 1fr;
+       gap: 10px 5px;
+       align-items: left;
+       max-width: 300px;
+       margin: 0px;
+   }
+   form[name="TechgadgetProduct"] label {
+       text-align: left;
+       padding-right: 5px;
+   }
+   form[name="TechgadgetProduct"] input[type="text"] {
+       width: 100%;
+   }
+   form[name="TechgadgetProduct"] input[type="submit"] {
+       grid-column: 2;
+       justify-self: start;
+   }
+</style>
 <?php
-if (!isset($_POST['TechgadgetProductID']) or (!is_numeric($_POST['TechgadgetProductID']))) {
+$TechgadgetProductID = $_POST['TechgadgetProductID'];
+$product = Product::findProduct($TechgadgetProductID);
+if ($product) {
 ?>
-   <h2>You did not select a valid TechgadgetProductID value</h2>
+   <h2>Update Product <?php echo $TechgadgetProductID; ?></h2><br>
+   <form name="TechgadgetProduct" action="index.php" method="post">
+       <label for="TechgadgetProductName">TechgadgetProduct Name:</label>
+       <input type="text" name="TechgadgetProductName" id="TechgadgetProductName" value="<?php echo $product->TechgadgetProductName;?>">
+       <label for="TechgadgetcategoryID">TechgadgetCategory ID:</label>
+       <input type="number" name="TechgadgetcategoryID" id="TechgadgetCategoryID" value="<?php echo $product->TechgadgetCategoryID; ?>">
+       <label for="TechgadgetProductCode">TechgadgetProduct Code:</label>
+       <input type="text" name="TechgadgetProductCode" id="TechgadgetProductCode" value="<?php echo $product->TechgadgetProductCode; ?>">
+       <label for="TechgadgetDescription">Techgadget Description:</label>
+       <input type="text" name="TechgadgetDescription" id="TechgadgetDescription" value="<?php echo $product->TechgadgetDescription; ?>">
+       <label for="Techgadgetcolor">Techgadget Color:</label>
+       <input type="text" name="Techgadgetcolor" id="Techgadgetcolor" value="<?php echo $product->Techgadgetcolor; ?>">
+       <label for="TechgadgetWholesalePrice">Techgadget WholesalePrice:</label>
+       <input type="number" name="TechgadgetWholesalePrice" id="TechgadgetWholesalePrice" value="<?php echo $product->TechgadgetWholesalePrice; ?>">
+       <label for="TechgadgetListPrice"> TechgadgetList Price: </label> 
+       <input type="number" name="TechgadgetListPrice" id="TechgadgetListPrice" value="<?php echo $product->TechgadgetListPrice; ?>">
+       <input type="submit" name="answer" value="Update Product">
+       <input type="submit" name="answer" value="Cancel">
+       <input type="hidden" name="TechgadgetProductID" value="<?php echo $TechgadgetProductID; ?>">
+       <input type="hidden" name="content" value="changeTechgadgetproduct">
+   </form>
+<?php
+} else {
+?>
+   <h2>Sorry, Product <?php echo $TechgadgetProductID; ?> not found</h2>
    <a href="index.php?content=listTechgadgetproducts">List Products</a>
    <?php
-} else {
-   $TechgadgetProductID = $_POST['TechgadgetProductID'];
-   $product = Product::findProduct($TechgadgetProductID);
-   if ($product) {
-   ?>
-       <h2>Update Product <?php echo $product->TechgadgetProductID; ?></h2><br>
-       <form name="products" action="index.php" method="post">
-           <table>
-               <tr>
-                   <td>TechgadgetProduct ID</td>
-                   <td><?php echo $product->TechgadgetProductID; ?></td>
-               </tr>
-               <tr>
-               <td>TechgadgetProduct Name</td>
-                   <td><input type="text" name="TechgadgetProductName" minlength="1" maxlength="255" required value="<?php echo $product->TechgadgetProductName; ?>"></td>
-               </tr>
-               <tr>
-                   <td>TechgadgetCategory ID</td>
-               <td><input type="number" name="TechgadgetCategoryID" min="100" max="99999999999" required  value="<?php echo $product->TechgadgetCategoryID; ?>"></td>
-               </tr>
-               <tr> 
-                 <td>Techgadget ProductCode </td>
-                 <td><input type="text" name="TechgadgetProductCode" minlength = "1" maxlength = "10" required value="<?php echo $product->TechgadgetProductCode; ?>"></td>
-               </tr>
-               <tr>
-                <td>Techgadget Description </td> 
-                <td><input type="text" name="TechgadgetDescription" required value="<?php echo $product->TechgadgetDescription; ?>"></td>
-               </tr>
-               <tr>
-                <td>Techgadget color</td>
-                <td><input type="text" name="Techgadgetcolor" minlength = "1" maxlength = "255" required value="<?php echo $product->Techgadgetcolor; ?>"></td>
-               </tr>
-               <tr>
-                <td>Techgadget WholesalePrice </td> 
-               <td><input type="number" name="TechgadgetWholesalePrice"  min = "0" max = "9999999999" step = "0.01" required value="<?php echo $product->TechgadgetWholesalePrice; ?>"></td>
-                </tr>
-                <tr>
-                   <td>Techgadget ListPrice</td>
-                 <td><input type="number" name="TechgadgetListPrice"  min = "0" max = "9999999999" step = "0.01" required value="<?php echo $product->TechgadgetListPrice; ?>"></td>
-               </tr>
-           </table><br><br>
-           <input type="submit" name="answer" value="Update Product">
-           <input type="submit" name="answer" value="Cancel">
-           <input type="hidden" name="TechgadgetProductID" value="<?php echo $TechgadgetProductID; ?>">
-           <input type="hidden" name="content" value="changeTechgadgetproduct">
-       </form>
-   <?php
-     } else {
-        ?>
-            <h2>Sorry, product <?php echo $TechgadgetProductID; ?> not found</h2>
-            <a href="index.php?content=listTechgadgetproducts">List Products</a>
-     <?php
-        }
-     }
-     ?>
-     
-
+}
+?>
+<script language="javascript">
+   document.TechgadgetProduct.TechgadgetProductName.focus();
+   document.TechgadgetProduct.TechgadgetProductName.select();
+</script>

@@ -9,7 +9,7 @@
        </tr>
    <?php
    } else {
-       echo "<td><h3>Welcome, {$_SESSION['firstName']} {$_SESSION['lastName']} </h3></td>\n";
+       echo "<td><h3>Welcome, {$_SESSION['firstName']} {$_SESSION['lastName']}</h3></td>\n";
    ?>
        <tr>
            <td><img src="images/homeicontech.png" alt= "TechgadgetHome Icon" width="12" height = "12">&nbsp;

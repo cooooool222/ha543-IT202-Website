@@ -175,9 +175,47 @@ static function findProduct($TechgadgetProductID)
            return NULL;
        }
    }
+   static function getTotalProducts()
+    {
+        $db = getDB();
+        $query = "SELECT count(TechgadgetProductID) FROM TechGadgetsProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        } else {
+            return NULL;
+        }
+    }
 
-
-
+    static function getTotalWholeSalePrice() 
+    {
+        $db = getDB();
+        $query = "SELECT sum(TechgadgetWholesalePrice) FROM TechGadgetsProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if($row) {
+            return $row[0];
+        } else {
+            return NULL;
+        }
+    }
+    static function getTotalListPrice()
+    {
+        $db = getDB();
+        $query = "SELECT sum(TechgadgetListPrice) FROM TechGadgetsProducts";
+        $result = $db->query($query);
+        $row = $result->fetch_array();
+        if ($row) {
+            return $row[0];
+        } else {
+            return NULL;
+        }
+    }
 }
+
+
+
+
 
 

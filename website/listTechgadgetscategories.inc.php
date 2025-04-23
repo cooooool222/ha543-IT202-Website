@@ -1,6 +1,25 @@
+<script language="javascript">
+   function listbox_dblclick() {
+       document.Techgadgetcategories.displayTechgadgetcategory.click()
+   }
+   function button_click(target) {
+       var userConfirmed = true;
+       if (target == 1) {
+           userConfirmed = confirm("Are you sure you want to remove this category?");
+       }
+       if (userConfirmed) {
+           if (target == 0) Techgadgetcategories.action = "index.php?content=displayTechgadgetcategory";
+           if (target == 1) Techgadgetcategories.action = "index.php?content=removeTechgadgetcategory";
+           if (target == 2) Techgadgetcategories.action = "index.php?content=updateTechgadgetcategory";
+       } else {
+           alert("Action canceled.");
+       }
+   }
+</script>
+
 <h2>Select Category</h2>
 <form name="Techgadgetcategories" method="POST">
-  <select name ="TechgadgetCategoryID" size="20">
+  <select ondblclick = "listbox_dblclick()" name ="TechgadgetCategoryID" size="20">
 <?php
 
 /* 
@@ -20,4 +39,10 @@ foreach($TechGadgetsCategories as $category) {
 }
 ?>
 </select>
+<br>
+   <input type="submit" onClick="button_click(0)" name="displayTechgadgetcategory" value="View Category">
+   <input type="submit" onClick="button_click(1)" name="deleteTechgadgetcategory" value="Delete Category">
+   <input type="submit" onClick="button_click(2)" name="updateTechgadgetcategory" value="Update Category">
 </form>
+
+
