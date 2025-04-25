@@ -5,7 +5,7 @@
    function button_click(target) {
       var userConfirmed = true; 
       if(target==1) {
-      userConfirmed = confirm("Are you sure you want to remove this category?");
+      userConfirmed = confirm("Are you sure you want to remove this product?");
       }
       if(userConfirmed) { 
         if(target==0) Techgadgetproducts.action = "index.php?content=displayTechgadgetproduct";

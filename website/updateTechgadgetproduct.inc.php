@@ -29,7 +29,7 @@ if ($product) {
        <label for="TechgadgetProductName">TechgadgetProduct Name:</label>
        <input type="text" name="TechgadgetProductName" id="TechgadgetProductName" value="<?php echo $product->TechgadgetProductName;?>">
        <label for="TechgadgetcategoryID">TechgadgetCategory ID:</label>
-       <input type="number" name="TechgadgetcategoryID" id="TechgadgetCategoryID" value="<?php echo $product->TechgadgetCategoryID; ?>">
+       <input type="number" name="TechgadgetCategoryID" id="TechgadgetCategoryID" value="<?php echo $product->TechgadgetCategoryID; ?>">
        <label for="TechgadgetProductCode">TechgadgetProduct Code:</label>
        <input type="text" name="TechgadgetProductCode" id="TechgadgetProductCode" value="<?php echo $product->TechgadgetProductCode; ?>">
        <label for="TechgadgetDescription">Techgadget Description:</label>

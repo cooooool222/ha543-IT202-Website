@@ -6,7 +6,6 @@ ha543@njit.edu
 Phase 1 Assignment: Login and Logout
 IT202-004
 */
-error_log("\$_POST " . print_r($_POST, true));
 require_once("TechGadgetscategory.php");
 if(isset($_SESSION['login'])) {
    if (!isset($_POST['TechgadgetCategoryID']) or (!is_numeric($_POST['TechgadgetCategoryID']))) {

@@ -6,7 +6,7 @@ ha543@njit.edu
 Phase 1 Assignment: Login and Logout
 IT202-004
 */
-include("TechGadgetsproduct.php");
+//require_once("TechGadgetsproduct.php");
 $TechgadgetProductID = $_POST['TechgadgetProductID'];
 $product = Product::findProduct($TechgadgetProductID);
 $result = $product->removeProduct();

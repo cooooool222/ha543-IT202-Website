@@ -45,7 +45,7 @@ if(!isset($_SESSION['login'])) {
 
 <?php
 } else{
-   echo "<h2>Welcome to TechGadgets Shop, {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']})</h2>";
+   echo "<h2>Welcome to TechGadgets Shop, {$_SESSION['firstName']} {$_SESSION['lastName']} ({$_SESSION['pronouns']}) <br> Logged in with: {$_SESSION['emailAddress']}</h2>";
 ?>
    <br><br>
    <p>This program tracks category and item inventory</p>

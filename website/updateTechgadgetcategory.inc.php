@@ -35,7 +35,7 @@ if ($category) {
        <label for="TechgadgetCategoryCode">Techgadgetcategory Code:</label>
        <input type="text" name="TechgadgetCategoryCode" id="TechgadgetCategoryCode" value="<?php echo $category->TechgadgetCategoryCode; ?>">
        <label for="TechgadgetCategoryName">Techgadgetcategory Name:</label>
-       <input type="text" name="TechgadgetCategoryName;" id="TechgadgetCategoryName" value="<?php echo $category->TechgadgetCategoryName; ?>">
+       <input type="text" name="TechgadgetCategoryName" id="TechgadgetCategoryName" value="<?php echo $category->TechgadgetCategoryName; ?>">
        <label for="TechgadgetshelfNumber">Techgadgetshelf Number:</label>
        <input type="text" name="TechgadgetshelfNumber" id="TechgadgetshelfNumber" value="<?php echo $category->TechgadgetshelfNumber; ?>">
        <input type="submit" name="answer" value="Update Category">
